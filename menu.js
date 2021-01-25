@@ -12,6 +12,34 @@ module.exports = (mainWinWebcontent) => {
             mainWinWebcontent.send("menu-show-modal");
           },
         },
+        {
+          label: "Read Item",
+          accelerator: "CmdOrCtrl+Enter",
+          click: () => {
+            mainWinWebcontent.send("menu-open-item");
+          },
+        },
+        {
+          label: "Delete Item",
+          accelerator: "CmdOrCtrl+Backspace",
+          click: () => {
+            mainWinWebcontent.send("menu-delete-item");
+          },
+        },
+        {
+          label: "Open in Browser",
+          accelerator: "CmdOrCtrl+Shift+Enter",
+          click: () => {
+            mainWinWebcontent.send("menu-open-item-native");
+          },
+        },
+        {
+          label: "Focus Search Input",
+          accelerator: "CmdOrCtrl+s",
+          click: () => {
+            mainWinWebcontent.send("menu-focus-search");
+          },
+        },
       ],
     },
     { role: "editMenu" },

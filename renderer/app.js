@@ -14,6 +14,19 @@ const showModalBtn = document.getElementById("show-modal"),
 ipcRenderer.on("menu-show-modal", () => {
   showModalBtn.click();
 });
+ipcRenderer.on("menu-open-item", () => {
+  items.openUrl();
+});
+ipcRenderer.on("menu-delete-item", () => {
+  const { index } = items.getSelectedItem();
+  items.delete(index);
+});
+ipcRenderer.on("menu-open-item-native", () => {
+  items.openNative();
+});
+ipcRenderer.on("menu-focus-search", () => {
+  searchInput.focus();
+});
 
 searchInput.addEventListener("keyup", (e) => {
   Array.from(document.getElementsByClassName("read-item")).forEach((item) => {
