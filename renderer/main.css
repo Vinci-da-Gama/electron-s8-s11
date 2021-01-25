@@ -49,8 +49,9 @@ header {
   flex-grow: 1;
 }
 
-#items {
+main {
   flex-grow: 1;
+  overflow-y: scroll;
 }
 
 #no-items {
@@ -94,4 +95,29 @@ header {
 
 #add-item {
   margin-left: 25px;
+}
+
+.read-item {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  border-bottom: lightgray 2px solid;
+  background-color: #fafafa;
+  padding: 10px;
+  border-left: 10px solid lightgray;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.read-item:hover {
+  background-color: #EEE;
+}
+
+.read-item.selected {
+  border-left-color: dodgerblue;
+}
+
+.read-item img {
+  width: 20%;
+  margin-right: 25px;
 }

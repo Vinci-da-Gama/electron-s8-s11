@@ -1,20 +1,20 @@
 {
   "name": "s8-s11",
   "version": "1.0.0",
-  "description": "Master Electron Course Code",
+  "description": "Electron project s8 to s11",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "watch": "nodemon --exec electron .",
     "reset": "git reset --hard"
   },
-  "repository": "https://github.com/stackacademytv/master-electron",
+  "repository": "https://github.com/Vinci-da-Gama/electron-s8-s11",
   "keywords": [
     "Electron",
     "Master Electron",
     "demo"
   ],
-  "author": "GitHub, Stackacademytv",
+  "author": "helloworld, s8-s11",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^12.0.0-beta.16",
