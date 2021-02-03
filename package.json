@@ -1,6 +1,6 @@
 {
   "name": "s8-s11",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Electron project s8 to s11",
   "main": "main.js",
   "scripts": {
@@ -8,7 +8,13 @@
     "watch": "nodemon --exec electron .",
     "reset": "git reset --hard",
     "ebhelp": "electron-builder --help",
-    "win-cert": "electron-builder create-self-signed-cert -p CompanyNameOrAuthorName"
+    "win-cert": "electron-builder create-self-signed-cert -p CompanyNameOrAuthorName",
+    "macbuild": "electron-builder -m",
+    "build": "electron-builder -mwl",
+    "release": "electron-builder -mwl -p 'onTagOrDraft'",
+    "seeMainLog": "cat ~/Library/Logs/s8-s11/main.log",
+    "clearLog": "echo '' > ~/Library/Logs/s8-s11/main.log",
+    "tailLog": "tail -f ~/Library/Logs/s8-s11/main.log"
   },
   "repository": "https://github.com/Vinci-da-Gama/electron-s8-s11",
   "homepage": "https://github.com/Vinci-da-Gama/electron-s8-s11",
@@ -25,14 +31,18 @@
     "nodemon": "^2.0.7"
   },
   "dependencies": {
+    "electron-log": "^4.3.1",
+    "electron-updater": "^4.3.5",
     "electron-window-state": "^5.0.3"
   },
   "build": {
     "appId": "com.helloworldcompanyName.s8-s11",
     "copyright": "Copyright helloworldcompanyName",
+    "publish": {
+      "provider": "github"
+    },
     "mac": {
-      "category": "public.app-category.productivity",
-      "target": "dmg"
+      "category": "public.app-category.productivity"
     },
     "win": {
       "target": "zip",
